@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Product Management System</title>
+</head>
+
+<body>
+    
+    <div class="container pt-2">
+
+        <!-- Title -->
+        <div class="text-center">
+            <h1 class="text-white text-center fs-5 border border-secondary rounded-pill my-4 d-inline-block px-4 py-2 text-uppercase">Products Management</h1>
+        </div>
+
+        <div class="w-75 mx-auto p-3 rounded inputs-container">
+
+            <!-- Product Name -->
+            <div class="form-floating mb-3">
+                <input id="productName" type="text" class="form-control" placeholder="" />
+                <label for="productName">Product Name</label>
+            </div>
+
+            <!-- Product Price -->
+            <div class="form-floating mb-3">
+                <input id="productPrice" type="number" class="form-control" placeholder="" />
+                <label for="productPrice">Product Price</label>
+            </div>
+
+            <!-- Product Description -->
+            <div class="form-floating mb-3">
+                <textarea id="productDesc" class="form-control" placeholder=""></textarea>
+                <label for="productDesc">Product Description</label>
+            </div>
+
+            <!-- Product Category -->
+            <div class="form-floating mb-3">
+                <input id="productCat" type="text" list="categories" class="form-control" placeholder="" />
+                <label for="productCat">Product Category</label>
+                <datalist id="categories">
+                    <option value="TV"></option>
+                    <option value="Smart Phones"></option>
+                    <option value="Screens"></option>
+                    <option value="Laptops"></option>
+                </datalist>
+            </div>
+
+            <!-- Product Image -->
+            <div class="form-floating mb-3">
+                <input id="productImage" type="file" class="form-control" />
+                <label for="">Product Image</label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+                <span>
+                    <button id="btnAddProduct" class="glowing btn btn-success" disabled>Add Product</button>
+                    <button id="btnUpdateProduct" class="glowing btn btn-warning" hidden disabled>Update Product</button>
+                </span>
+                <span>
+                    <button id="btnClearForm" class="btn btn-info">Clear Form</button>
+                </span>
+            </div>
+
+            <!-- Products Display Panel -->
+            <div id="displayPanel" class="row mt-5 gy-3">
+
+                <div class="col-lg-4 text-white" >
+                    <div class="border border-white rounded px-3 py-2">
+                        <figure class="border border-secondary rounded p-2">
+                            <img src="" alt="product image" class="w-100" />
+                        </figure>
+                        <div>
+                            <div>Product Name:&nbsp;<span>${product.Name}</span></div>
+                            <div>Product Price:&nbsp;<span>${product.Price}</span></div>
+                            <div>Product Category:&nbsp;<span>${product.Category}</span></div>
+                            <div>Product Description:&nbsp;<p class="product-description overflow-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odit temporibus iste provident. Amet at iusto deserunt accusamus alias dignissimos dolorum, maiores minus optio sequi tempore cupiditate. Possimus autem qui consectetur aliquam voluptatum rerum beatae ad quo in harum inventore quos, neque optio hic consequatur eum magnam cumque deleniti sunt illum. Deleniti in non fuga ipsa explicabo omnis minus nobis quibusdam pariatur alias consequatur ad perspiciatis voluptate, eum voluptates quam? Eligendi aut repellendus beatae, est hic deserunt quis excepturi nobis numquam? Consectetur, culpa numquam eligendi dolores quam iure adipisci totam, praesentium consequatur provident omnis quos doloremque molestias qui saepe vero.</p></div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pencil"></i> Edit</button>
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+    </div>
+    
+    <!-- scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

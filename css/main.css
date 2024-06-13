@@ -1,0 +1,48 @@
+body{
+    background-color: #222;
+}
+
+.inputs-container{
+    box-shadow: 0 0 50px 5px #ccc3;
+}
+
+#productDesc:focus{
+    height: 6.2em;
+}
+
+.glowing{
+    animation-name: none;
+}
+
+.glowing:hover{
+    animation-name: glow;
+    animation-duration: 900ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes glow {
+    0%{
+        box-shadow: 0 0 3px 3px #fff9;
+    }
+    100%{
+        box-shadow: 0 0 3px 1px #fff0;
+    }
+    /* 100%{
+        box-shadow: 0 0 4px 2px #fff1;
+    } */
+}
+
+.product-description{
+    height: 4.9rem;
+    padding: 0 0 0 5px;
+    line-height: 1.2rem;
+    border-left: hsl(0, 0%, 50%) 3px solid;
+    background-color: hsl(0, 0%, 16%);
+    border-radius: 3px;
+}
+
+div.form-floating label{
+    color: #888;
+}
